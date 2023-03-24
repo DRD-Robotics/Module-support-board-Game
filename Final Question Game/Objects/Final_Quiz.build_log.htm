@@ -1,0 +1,187 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Daisy-Rose Davies, plymouth university, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\daisy\OneDrive\Desktop\ELEC 240\Final Question Game\Final_Quiz.uvprojx
+Project File Date:  12/18/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+switch.c(1): warning: In file included from...
+./switch.h(30): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+switch.c(3): warning: In file included from...
+./LED.h(82): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+2 warnings generated.
+compiling switch.c...
+LED.c(1): warning: In file included from...
+./LED.h(82): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LED.c(200): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+2 warnings generated.
+compiling LED.c...
+buzzer.c(1): warning: In file included from...
+./buzzer.h(31): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+1 warning generated.
+compiling buzzer.c...
+main.c(3): warning: In file included from...
+./PLL_Config.c(3): warning: no previous prototype for function 'PLL_Config' [-Wmissing-prototypes]
+void PLL_Config(void)
+     ^
+./PLL_Config.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PLL_Config(void)
+^
+static 
+main.c(5): warning: In file included from...
+./LED.h(82): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(6): warning: In file included from...
+./LCD.h(77): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(7): warning: In file included from...
+./switch.h(30): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(8): warning: In file included from...
+./buzzer.h(31): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(379): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+6 warnings generated.
+compiling main.c...
+LCD.c(1): warning: In file included from...
+./LCD.h(77): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(3): warning: In file included from...
+./buzzer.h(31): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(6): warning: In file included from...
+./switch.h(30): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+LCD.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        set_LCD_bus_input();
+        ^~~~~~~~~~~~~~~~~~~
+./LCD.h(40): note: expanded from macro 'set_LCD_bus_input'
+#define set_LCD_bus_input()             LCD_PORT->MODER&=~(0xffff<<(2*LCD_D0_pin))
+                                                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+LCD.c(64): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        LCD_PORT->BSRR=(d<<LCD_D0_pin);                                 //put data on lines
+                      ~ ~^~~~~~~~~~~~
+LCD.c(94): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        set_LCD_data((cmd & 0x0F)<< 4); 
+        ~~~~~~~~~~~~ ~~~~~~~~~~~~^~~~
+LCD.c(113): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+                set_LCD_data((put)<< 4);                
+                ~~~~~~~~~~~~ ~~~~~^~~~
+LCD.c(245): warning: function 'scroll2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+LCD.c(310): warning: no newline at end of file [-Wnewline-eof]
+        
+        ^
+9 warnings generated.
+compiling LCD.c...
+compiling DAC.c...
+USART.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART_PORT->AFR[i1]&=~(0x0f<<(4*(USART_TX_pin-(i1*8))));    //clear pin function
+                           ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USART.c(56): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART_PORT->AFR[i1]|=(0x07<<(4*(USART_TX_pin-(i1*8))));                 // set usart as alternate function for TX_pin
+                           ~~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+USART.c(57): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART_PORT->AFR[i2]&=~(0x0f<<(4*(USART_RX_pin-(i2*8))));                // clear pin function
+                           ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USART.c(58): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART_PORT->AFR[i2]|=(0x07<<(4*(USART_RX_pin-(i2*8))));                 //set usart as alternate function for RX_pin
+                           ~~ ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+USART.c(86): warning: format string is not a string literal [-Wformat-nonliteral]
+                vsprintf(transmit_buffer,format,args);
+                                         ^~~~~~
+USART.c(108): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+        char received = USART_MODULE->DR;
+             ~~~~~~~~   ~~~~~~~~~~~~~~^~
+USART.c(108): warning: unused variable 'received' [-Wunused-variable]
+        char received = USART_MODULE->DR;
+             ^
+7 warnings generated.
+compiling USART.c...
+ADC.c(23): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'unsigned short' [-Wimplicit-int-conversion]
+        return ADC1->DR;                                                                        //return converted value
+        ~~~~~~ ~~~~~~^~
+1 warning generated.
+compiling ADC.c...
+compiling delay.c...
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=4264 RO-data=756 RW-data=4 ZI-data=1632  
+".\Objects\Final_Quiz.axf" - 0 Error(s), 28 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\daisy\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\daisy\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
